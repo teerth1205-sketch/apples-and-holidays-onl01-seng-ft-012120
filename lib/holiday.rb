@@ -66,7 +66,8 @@ holiday_hash[season][holiday_name] = supply_array
 end
 
 def all_winter_holiday_supplies(holiday_hash)
- holiday_hash[:winter].values do |holiday, supplies|
+ holiday_hash[:winter].values 
+ 
    
   
  
