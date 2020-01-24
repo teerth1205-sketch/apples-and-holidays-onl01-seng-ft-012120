@@ -1,6 +1,7 @@
 require 'pry'
 
 def second_supply_for_fourth_of_july(holiday_hash)
+holiday_hash[:summer][:fourth_of_july][1]
   # given that holiday_hash looks like this:
   # {
   #   :winter => {
@@ -21,6 +22,18 @@ def second_supply_for_fourth_of_july(holiday_hash)
 end
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
+  holiday_hash.each do |season, holiday|
+    if season == :winter 
+      holiday.each do |holidays, items|
+        if holidays == :christmas 
+          items << "Balloons"
+          elsif holidays == :new_years
+          items << "Balloons"
+        end
+      end 
+    end 
+  end 
+  
   # holiday_hash is identical to the one above
   # add the second argument, which is a supply, to BOTH the
   # Christmas AND the New Year's arrays
@@ -29,12 +42,24 @@ end
 
 
 def add_supply_to_memorial_day(holiday_hash, supply)
+  holiday_hash.each do |season, holiday|
+    if season == :spring 
+      holiday.each do |holidays, items|
+        items.push(supply)
+        
+    
+      end 
+    end 
+  end 
   # again, holiday_hash is the same as the ones above
   # add the second argument to the memorial day array
 
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
+  
+holiday_hash[season][ho.holiday_name] = supply_array
+holiday_hash
   # code here
   # remember to return the updated hash
 
