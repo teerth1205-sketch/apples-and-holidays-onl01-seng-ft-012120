@@ -102,8 +102,7 @@ def all_holidays_with_bbq(holiday_hash)
       supply.collect do |supplies|
         if supplies == "BBQ"
            holidays
-         else
-           break
+           
         end
       end
     end
