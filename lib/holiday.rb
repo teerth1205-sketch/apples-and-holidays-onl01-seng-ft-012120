@@ -101,7 +101,7 @@ def all_holidays_with_bbq(holiday_hash)
     holiday.collect do |holidays,supply|
       supply.collect do |supplies|
         if supplies == "BBQ"
-           holidays.flatten.compact
+           holidays
         end
       end
     end
