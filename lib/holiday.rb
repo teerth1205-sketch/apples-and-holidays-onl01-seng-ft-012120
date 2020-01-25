@@ -99,9 +99,9 @@ def all_supplies_in_holidays(holiday_hash)
 def all_holidays_with_bbq(holiday_hash)
   holiday_hash.each do |season, holiday|
     holiday.each do |holidays,supply|
-      supply.each do |supplies|
+      supply.collect do |supplies|
         if supplies == "BBQ"
-          return holidays
+          return holiday
         end
       end
     end
